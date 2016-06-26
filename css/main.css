@@ -1,0 +1,54 @@
+/* null margins and padding to give good cross-browser baseline */
+html,body,address,blockquote,div,
+form,fieldset,caption,
+h1,h2,h3,h4,h5,h6,
+hr,ul,li,ol,ul,
+table,tr,td,th,p,img {
+margin:0;
+padding:0;
+}
+
+img,fieldset {
+border:none;
+}
+h1 {
+font-family: 'Libre Baskerville', serif;
+font-size: 2em;
+text-align: center;
+margin: 0 0 10px 0;
+}
+
+
+/*.count-container {
+  position: relative;
+  height: 50px;
+}
+*/
+.container {
+  width: 960px;
+  margin-top: 15px;
+}
+
+#count {
+height: 60px;
+position: relative;
+border: 1px solid black;
+padding-bottom: 10px;
+width: 959px;
+margin-top: -5px;
+background: #BFCF6A;
+}
+
+#count span {
+  position: absolute;
+  bottom: 15px;
+  margin-left: 11em;
+  font-weight: bold;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+b {
+font-size: 2.2em;
+color: #fff;
+}
