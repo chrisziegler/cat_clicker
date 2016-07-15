@@ -1,2 +1,2 @@
 # cat_clicker
-Udacity JavaScript Design Patterns Mosule 1 (sigh)
+Udacity JavaScript Design Patterns Module 1 
