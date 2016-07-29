@@ -114,3 +114,14 @@ height: auto;
 width: 100%;
 
 }
+.ticker-tape {
+  float: left;
+  font-size: 2em;
+  color: tomato;
+}
+
+.ticker-counter {
+  float: right;
+  font-size: 3em;
+  color: #000;
+}

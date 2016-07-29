@@ -1,37 +1,73 @@
+document.addEventListener('DOMContentLoaded', function(event) {
+    var cats = [{
+            name: 'Charlie',
+            src: 'images/cat.jpg'
+        },
+
+        {
+            name: 'Muffin',
+            src: 'images/cat2.jpg'
+        },
+
+        {
+            name: 'Stash',
+            src: 'images/cat3.jpg'
+        },
+
+        {
+            name: 'Food Eater',
+            src: 'images/cat4.jpg'
+        },
+
+        {
+            name: 'Groundskeeper Willy',
+            src: 'images/cat5.jpg'
+        },
+
+        {
+            name: 'Mike',
+            src: 'images/cat6.jpg'
+        }
+    ];
 
 
-  document.addEventListener('DOMContentLoaded', function(event){
-        var cats = ['Charlie', 'Muffin', 'Stash', 'Food Eater', 'Groundskeeper Willy', 'Mike'];
 
-        for(var i = 0; i < cats.length; i++) {
-          var dynamicCats = cats[i];
-          var catDiv = document.createElement('div');
-          catDiv.textContent = dynamicCats;
+    for (var i = 0; i < cats.length; i++) {
+        var navCats = cats[i].name;
+        // console.log(navCats);
+        var catNavDiv = document.createElement('div');
+        catNavDiv.textContent = navCats;
+        var dynamicCats = cats[i].src;
+    
 
-      catDiv.addEventListener('click', (function(catsCopy){
-       return function() {
-         //replace with load selected cat into #clicker
-         alert(catsCopy);
-       };
+        // sweet for-loop closure, outer function holds a copy of our key iterated variables
+        // so that it returns the inner function in its own execution context
+        catNavDiv.addEventListener('click', (function(navCatsCopy, dynamicCatsCopy) {
+            return function() {
+                //replace with load selected cat into #clicker
+                 //alert('You clicked ' + navCatsCopy);
+                var clickPic = document.getElementById('clicker');
+                clickPic.innerHTML = '<img class="swap-cats" src = ' + dynamicCatsCopy + ' alt = ' + navCatsCopy + '>'
+
+                // console.log(clickPic); //shows successful swap of innerHTML
+
+            };
+        })(navCats, dynamicCats));
+        document.getElementById('catlist').appendChild(catNavDiv);
 
 
-     })(dynamicCats));
+    };
 
-document.getElementById('catlist').appendChild(catDiv);
 
-  };
+    // for (var i = 0; i < cats.length; i++)  {
+    //   var dynamicCats = cats[i].src;
+    //   console.log(dynamicCats);
+    //   var clickPic = document.getElementById('#clicker');
+    //   clickPic.innerHTML = '<img class="swap-casts" src = ' + dynamicCats + ' alt = "cat pic">'
+    // }
+
 
 });
-
-
-
-
-
-
-
-
-
-
 
 
 

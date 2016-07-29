@@ -1,0 +1,32 @@
+
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        BASE (standard element resets, etc)
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - */
+    html, body, address, blockquote, div, nav, main, form, fieldset, caption, h1, h2, h3, h4, h5, h6, hr, ul, li, ol, ul, table, tr, td, th, p, img {
+        margin: 0;
+        padding: 0;
+    }
+    html {
+        font-size 16px;
+    }
+    img, fieldset {
+        border: none;
+      }
+    body {
+        font-family: 'Open-Sans', sans-serif;
+        font-weight: 300;
+        font-size: 62.5%;
+        background: #FFF;
+    }
+
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Now when we set a width, that element stays that width, despite
+    padding or borders being applied.
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+    *, *:after, *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
